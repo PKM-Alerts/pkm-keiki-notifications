@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PKM Keiki Notifications</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function () {
+        OneSignal.init({
+          appId: "611e6d88-845d-4564-bd43-ff0d8ef7a74a",
+        });
+      });
+    </script>
+    <style>
+      body {
+        background-color: #f4f4f4;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      .subscribe-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: #666;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>PKM Keiki</h1>
+      <h2>Subscribe to PKM Keiki Messages</h2>
+      <p>Get push notifications for updates<br>and announcements.</p>
+      <button class="subscribe-btn" onclick="OneSignal.showSlidedownPrompt()">SUBSCRIBE</button>
+    </div>
+  </body>
+</html>
